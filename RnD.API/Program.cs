@@ -1,6 +1,12 @@
+using RnD.API.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+#region AppSettings:
+builder.Services.Configure<LoggerOption>(builder.Configuration.GetSection(LoggerOption.LoggerSettings));
+#endregion
 
 builder.Services.AddControllers();
 
