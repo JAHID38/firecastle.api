@@ -24,13 +24,16 @@ namespace RnD.API.Controllers
 
         [HttpGet]
         [Route("status")]
-        public async Task<IActionResult> GetStatusAsync([FromQuery] string? param)
+        public async Task<IActionResult> GetStatusAsync([FromQuery] string param)
         {
+            param = param.ToLower();
+
             var response = param switch
             {
                 "logger" => _logger.EnableLog ? "Enabled" : "Disabled",
                 _ => throw new NotImplementedException()
             };
+
             return Ok(await Task.FromResult(response));
         }
     }
