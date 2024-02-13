@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireCastle.API", "FireCastle.API.csproj", "{AFB25EB3-E1D7-4684-B853-6B3ECA76A12E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireCastle.API", "FireCastle.API.csproj", "{AFB25EB3-E1D7-4684-B853-6B3ECA76A12E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RnD.API", "..\RnD.API\RnD.API.csproj", "{A13D4102-D829-4ABE-9F0D-193382A8BDDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RnD.API", "..\RnD.API\RnD.API.csproj", "{A13D4102-D829-4ABE-9F0D-193382A8BDDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RnD.gRPC", "..\RnD.gRPC\RnD.gRPC.csproj", "{1B41A990-709F-4582-AEA2-2289015D9417}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A13D4102-D829-4ABE-9F0D-193382A8BDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A13D4102-D829-4ABE-9F0D-193382A8BDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A13D4102-D829-4ABE-9F0D-193382A8BDDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B41A990-709F-4582-AEA2-2289015D9417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B41A990-709F-4582-AEA2-2289015D9417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B41A990-709F-4582-AEA2-2289015D9417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B41A990-709F-4582-AEA2-2289015D9417}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
