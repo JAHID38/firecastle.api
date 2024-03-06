@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using RnD.API.Options;
+using Shared.Converters;
 
 namespace RnD.API.Controllers
 {
@@ -33,6 +34,16 @@ namespace RnD.API.Controllers
                 "logger" => _logger.EnableLog ? "Enabled" : "Disabled",
                 _ => throw new NotImplementedException()
             };
+
+            return Ok(await Task.FromResult(response));
+        }
+        [HttpGet]
+        [Route("converter")]
+        public async Task<IActionResult> ConvertTimeToSecond([FromQuery] string param)
+        {
+            param = param.ToLower().Trim();
+
+            var response = string.Concat(TimeConverter.ConvertToSeconds(param), 's');
 
             return Ok(await Task.FromResult(response));
         }
