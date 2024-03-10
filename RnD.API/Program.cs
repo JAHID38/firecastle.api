@@ -1,4 +1,5 @@
 using RnD.API.Options;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 #region AppSettings:
 builder.Services.Configure<LoggerOption>(builder.Configuration.GetSection(LoggerOption.LoggerSettings));
 #endregion
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 builder.Services.AddControllers();
 
