@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using RnD.API.Commands;
+using RnD.API.Infrastructures.Auth;
 using RnD.API.Request;
 
 namespace RnD.API.Controllers
